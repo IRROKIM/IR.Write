@@ -1,26 +1,19 @@
-  /* html,body{
-        width: 100%;
-        height: 100%;
-    } */
-    html,body{
+
+     html,body{
         width: 100%;
         height: 100%;
         margin: 0;
-    }
-    body{
-        overflow: hidden;
-    
-    }
-    .back_container{
-        width: 100vw; 
-        height: 100vh; 
+    } 
+    .back-container{
+        width: 100%; 
+        height: 100%; 
         position: relative;
         z-index: 1;
     }
-    .back_container::after{
+    .back-container::after{
         margin: 0;
-        width: 100vw; 
-        height: 100vh; 
+        width: 100%; 
+        height: 100%; 
         background: url("./images/forest.png");
         background-repeat: no-repeat;
         background-position: center;
@@ -30,6 +23,7 @@
         top: 0;
         left: 0;
         z-index: -1;
+        filter: blur(5px);
     }
     .head{
         margin: 0;
@@ -37,3 +31,100 @@
         padding: 30px;
         color: white;
     }
+    header{
+        margin: 0;
+    }
+    .section-option{
+        margin: 30px auto;
+        display: flex; /*  flex 정렬 시작 */
+        flex-direction: row;  /* 배치 방향 설정 */
+        justify-content: center;  /* 메인축 방향 정렬 */
+        align-items: center;  /* 수직축 방향 정렬 */
+        flex-wrap: nowrap;
+        max-width: 100%;
+        clear: both;
+        position: relative;
+        padding: 0 100px 0 100px;
+    }
+    
+    .search-box{
+        display: flex;
+        justify-content: center;
+        padding:5px; /*사방 여백 10px*/
+        border-radius: 30px; /*테두리 모서리 30px만큼 동그랗게*/
+        border: 3px solid white; /*테두리 1px 색깔*/
+        background-color: white;
+        justify-content: center;
+       
+    }
+    .search-txt{
+        text-align: center; /*placeholder 가운데 정렬*/
+        display: flex; /*flex 정렬 시작*/
+        align-items: center; /*수직축 방향 정렬*/
+        justify-content: center; /*메인축 방향 정렬*/
+        padding: 0; /*input 태그 기본 padding 제거*/
+        width: 300px; /*너비*/
+        border: none; /*테두리 제거*/
+        outline: none; /*input 태그 포커스시 outline 제거*/
+        float: left; /*엘리먼트 왼쪽부터 나열*/
+        font-size: 16px; /*택스트 크기*/
+        line-height: 30px; /*수직 중앙 정렬*/
+    }
+    .search-btn{
+        text-decoration: none;/*A태그 기본 underline 제거*/
+        min-width: 30px;
+        height: 30px;
+        border-radius: 30px; /*테두리 모서리 30px만큼 동그랗게*/
+        color: black;
+        margin-right: 10px; /*돋보기 우측에 여백 생성*/
+    }
+    .section-login{
+        font-size: 16px;
+        font-weight: 600;
+        text-decoration: none;
+        color: white;
+        display: inline-block;
+        line-height: 40px;
+        height: 40px;
+        margin: 0 20px 0 0;
+    }
+    
+    .button{
+        border: 2px solid;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition:all .4s;
+        margin: 0 20px 0 20px;
+        font-size: 16px;
+        font-weight: 600;
+        outline: none;
+        cursor: pointer;
+    }
+    .section-button{
+        height: 45px;
+        line-height: 42px;
+        border-radius: 30px;
+        color: white;
+        border-color: white;
+        min-width: 120px;
+    }
+    .section-button:hover{
+        background: #ff512f;
+        border-color: #ff512f;
+        color: white;
+    }
+    .section-option .option-part{
+        width: 50%;
+    }
+    .section-option .option-part .part-left{
+        text-align: center;
+    }
+    .section-option .option-part .part-right{
+        text-align: right;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+   
