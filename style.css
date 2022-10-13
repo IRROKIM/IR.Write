@@ -44,9 +44,8 @@
         max-width: 100%;
         clear: both;
         position: relative;
-        padding: 0 100px 0 100px;
+        /*padding: 0 100px 0 100px; 화면 줄이면 센터 정렬에 방해됨*/
     }
-    
     .search-box{
         display: flex;
         justify-content: center;
@@ -54,7 +53,7 @@
         border-radius: 30px; /*테두리 모서리 30px만큼 동그랗게*/
         border: 3px solid white; /*테두리 1px 색깔*/
         background-color: white;
-        justify-content: center;
+        
        
     }
     .search-txt{
@@ -63,7 +62,7 @@
         align-items: center; /*수직축 방향 정렬*/
         justify-content: center; /*메인축 방향 정렬*/
         padding: 0; /*input 태그 기본 padding 제거*/
-        width: 300px; /*너비*/
+        width: 350px; /*너비*/
         border: none; /*테두리 제거*/
         outline: none; /*input 태그 포커스시 outline 제거*/
         float: left; /*엘리먼트 왼쪽부터 나열*/
@@ -71,11 +70,9 @@
         line-height: 30px; /*수직 중앙 정렬*/
     }
     .search-btn{
-        text-decoration: none;/*A태그 기본 underline 제거*/
-        min-width: 30px;
+        width: 30px;
         height: 30px;
         border-radius: 30px; /*테두리 모서리 30px만큼 동그랗게*/
-        color: black;
         margin-right: 10px; /*돋보기 우측에 여백 생성*/
     }
     .section-login{
@@ -86,7 +83,7 @@
         display: inline-block;
         line-height: 40px;
         height: 40px;
-        margin: 0 20px 0 0;
+        margin: 0 20px 5px 20px; /*우측 버튼과 높이 맞추기 위해 하단 margin 추가*/
     }
     
     .button{
@@ -108,23 +105,71 @@
         color: white;
         border-color: white;
         min-width: 120px;
-    }
+    } 
     .section-button:hover{
         background: #ff512f;
         border-color: #ff512f;
         color: white;
-    }
-    .section-option .option-part{
+    } 
+    .section-option.option-part{
         width: 50%;
     }
-    .section-option .option-part .part-left{
-        text-align: center;
+    .section-option.option-part.part-left{
+        text-align: left;
+     
     }
-    .section-option .option-part .part-right{
+    .section-option.option-part.part-right{
         text-align: right;
         display: flex;
         flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: center;
+        justify-content: center;
+        align-items: center; 
     }
+   input::placeholder{
+    color: black;
+    font-weight: 600;
+   }
+
+    .whiteFrame{
+    display: flex;
+    justify-content: center; /*flex 가로 정렬*/
+    align-items: center; /*flex 세로 정렬*/
+    margin: 30px 0 0 0; /*상단 margin*/
+    height: 590px; /*시간 프레임 중간에 걸치도록 만듬 */
+   }
+   .whiteFrame-back{
+    position: relative;
+   }
+   .whiteFrame-front{
+    position: absolute;
+   }
+   .whiteFrame-time {
+    position: absolute;
+    font-size: 14px;
+    color: white;
+    align-self: flex-start;
+    margin: 0 0 0 230px;
+   }
+   .middleSection{
+    display: flex;
+    justify-content: space-around; /*flex 가로 정렬*/
+    align-items: center; /*flex 세로 정렬*/
+   }
+   .middleSection-row{
+    width: 400px;
+    margin: 0 50px 0 150px;
+   }
+   .middleSection-row.middleSection-text{
+    color: white;
+   }
+   .middleSection-row.middleSection-text p{
+    color: white;
+    font-size: 20px;
+    font-weight: lighter;
+   }
+   .middleSection-row.middleSection-text h2{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+   }
    

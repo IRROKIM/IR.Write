@@ -19,32 +19,73 @@
         </header>
         <section>
             <div class="section-option">
-                    <div class="section-option option-part part-left">
-                   
-                    <a href="#" >
-                    <img src="main images/menu.png" width="45px" alt="image">
+                <div class="section-option option-part part-left">
+                    <a href="#">
+                        <img src="main images/menu.png" width="45px" alt="image">
                     </a>
-                    
-                    </div>
-                    <div class="search-box">
-                        <input type="text" class="search-txt" name="" 
-                        placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..HELLO"
-                        onfocus="this.placeholder=''" 
-                        onblur="this.placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...HELLO'" >
-                        <a class="search-btn" href="#">
-                            <img src="main images/서치.png" width="30px" alt="image">
-                        </a>
-                    </div>
-                    <div class="section-option option-part part-right">
-
-                        <a href="#" class="section-login">Login</a>
-                        <a href="#" class="button section-button">Get started</a>
-                    
-                     </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="search-txt" name="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..HELLO"
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...HELLO'">
+                    <a class="search-btn" href="#">
+                        <img src="main images/서치.png" width="30px" alt="image">
+                    </a>
+                </div>
+                <div class="section-option option-part part-right">
+                    <a href="#" class="section-login">Login</a>
+                    <a href="#" class="button section-button">Get started</a>
+                </div>
             </div>
         </section>
-
+        <div class="middleSection">
+            <div class="middleSection-row middleSection-text">
+            <img src="main images/쉼표.png" width="35px" alt="image">
+            <h2>The dancing tree</h2>
+            <p>The winds take nothing from the tree that only wants to waltz while naked -Haiku</p>
+            </div>
+            <div class="whiteFrame">
+                <div class="whiteFrame-back">
+                <img src="main images/하얀색 프레임.png" width="400px"  height="570px" alt="image">
+                </div>
+                <div class="whiteFrame-front">
+                <img src="main images/forest.png" width="350px" height="520px" alt="image">
+                </div>
+                <div id="clock" class="whiteFrame-time">
+                    <p>clock</p>
+                </div>
+            </div>
+            <div class="middleSection-row">           
+            </div>
+        </div>
     </div>
 </body>
+<script>
+    var Target = document.getElementById("clock");
+    function clock() {
+        var time = new Date();
 
+        var year = time.getFullYear();
+        var month = time.getMonth();
+        var date = time.getDate();
+        var day = time.getDay();
+        var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        var AmPm = "AM";
+        if(hours > 12){
+            var AmPm = "PM";
+            hours %= 12;
+        }
+
+        Target.innerText =
+        `${year}-${month + 1}-${date} ${week[day]}요일 ` +
+        `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` + `${AmPm}`;
+            
+    }
+    clock();
+    setInterval(clock, 1000); // 1초마다 실행
+</script>
 </html>
