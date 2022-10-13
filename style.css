@@ -172,4 +172,28 @@
     font-size: 30px;
     font-weight: bold;
    }
-   
+   .card-container{
+    display: flex; /*flex를 안넣으면 카드가 이상한데로 간다*/
+    justify-content: center;  /*flex*/
+    align-items: center;  /*flex*/
+    position: relative;
+    transition: .3s;
+    transform-style: preserve-3d;    
+    perspective: 1100px;   
+    }
+    .whiteFrame-itemFront{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    }
+    .whiteFrame-front:hover .card-container{  
+    transform: rotateY(180deg);
+    }
+    .whiteFrame-itemBack{
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    }
