@@ -193,7 +193,16 @@
     position: absolute;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    text-align: center;
-    color: white;
-    font-size: 30px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
     }
+    .itemBack-content{
+    position: absolute;
+    top: 45%;
+    left: 28%;
+    font-size: 30px;
+    color: white;
+    }
+
+  
