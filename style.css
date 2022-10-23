@@ -206,8 +206,14 @@
     }
     /* 회원가입 */
     .joinForm{
+        padding: 0 15px 0 15px;
+
+    }
+    .joinForm-head h2{
     display: flex;
     justify-content: center;
+    padding: 10px 0 10px 0;
+    margin: 0;
     }
     .form-control{
     display: block;
@@ -253,6 +259,50 @@
     .email-input_domain_expand.active:active, .email-input_domain_expand.active:focus,
     .email-input_domain_expand.active:hover{
         opacity: .6;
+    }
+    .joinFrom-font{
+        font-size: 12px;
+    }
+    .joinForm-table{
+        padding: 15px;
+        border: 1px solid #eaedef;
+    }
+    .join-form-checkbox::after{
+        content: "(필수)";
+        display: inline-block;
+        padding-left: 2px;
+        font-size: 12px;
+        line-height: 20px;
+        color: rgb(0,159,206);
+    }
+    .icon-right{
+        display: inline-block;
+        font-size: 18px;
+        line-height: 1;
+        color: rgb(47, 52, 56);
+    }
+    .joinForm-icon-right::before{
+        content: "\003E"; 
+    }
+    .joinFrom-btn{
+        color: #fff;
+        border-color: #35c5f0;
+        background-color: #35c5f0;
+        width: 100%;
+        display: inline-block;
+        margin: 0;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 700;
+        cursor: pointer;  
+        font-size: 17px;
+        padding: 5px 5px;
+    }
+    .joinFrom-btn:hover{
+        border-color: #09addb;
+        background-color: #09addb;
     }
 
     

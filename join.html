@@ -24,49 +24,50 @@
                         <img src="main images/menu.png" width="45px" alt="image">
                     </a>
                 </div>
-                <div class="search-box">
-                    <input type="text" class="search-txt" name="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..HELLO"
-                        onfocus="this.placeholder=''"
-                        onblur="this.placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...HELLO'">
-                    <a class="search-btn" href="#">
-                        <img src="main images/서치.png" width="30px" alt="image">
-                    </a>
-                </div>
-                <div class="section-option option-part part-right">
-                    <a href="#" class="section-login">Login</a>
-                    <a href="#" class="button section-button">Get started</a>
-                </div>
+                    <div class="search-box">
+                        <input type="text" class="search-txt" name="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..HELLO"
+                            onfocus="this.placeholder=''"
+                            onblur="this.placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...HELLO'">
+                        <a class="search-btn" href="#">
+                            <img src="main images/서치.png" width="30px" alt="image">
+                        </a>
+                    </div>
+                    <div class="section-option option-part part-right">
+                        <a href="#" class="section-login">Login</a>
+                        <a href="#" class="button section-button">Get started</a>
+                    </div>
             </div>
         </section>
         <div class="middleSection">
             <div class="middleSection-row middleSection-text">
-            <img src="main images/쉼표.png" width="35px" alt="image">
-            <h2>Welcome!</h2>
-            <p>IR.Write 다이어리에 오신 것을 환영합니다.<br>사용하실 아이디와 비밀번호를 입력해주세요.</p>
+                <img src="main images/쉼표.png" width="35px" alt="image">
+                <h2>Welcome!</h2>
+                <p>IR.Write 다이어리에 오신 것을 환영합니다.<br>사용하실 아이디와 비밀번호를 입력해주세요.</p>
             </div>
             <div class="whiteFrame">
                 <div class="whiteFrame-back">
-                <img src="main images/하얀색 프레임.png" width="400px"  height="570px" alt="image">
+                    <img src="main images/하얀색 프레임.png" width="400px" height="570px" alt="image">
                 </div>
-                <div class="whiteFrame-front">     
+                <div class="whiteFrame-front">
                     <div style="background-color: #fff; width: 350px; height: 520px;">
                         <div class="joinForm">
-                            <h2>회원가입</h2><br>
-                        </div>
-                        <div>
-                            <label>이메일</label>
-                        </div>
-                        <div class="email-input">
+                            <div class="joinForm-head">
+                                <h2>회원가입</h2>
+                            </div>
+                            <div>
+                                <label>이메일</label>
+                            </div>
+                            <div class="email-input">
                                 <span class="email-input_local">
-                                <label>
-                                    <input class="form-control" placeholder="이메일" size="1">
-                                </label>
+                                    <label>
+                                        <input class="form-control" placeholder="이메일" size="1">
+                                    </label>
                                 </span>
                                 <span class="email-input_separator">@</span>
                                 <span class="email-input_domain">
                                     <label>
-                                        <input id="selBoxDirect" style="display: none;"
-                                         class="form-control" placeholder="입력해주세요" size="1">
+                                        <input id="selBoxDirect" style="display: none;" class="form-control"
+                                            placeholder="입력해주세요" size="1">
                                         <select id="selBox" class="form-control" onchange="changeSelect()">
                                             <option selected value disabled>선택해주세요</option>
                                             <option value="naver.com">naver.com</option>
@@ -80,23 +81,88 @@
                                             <option value="direct">직접입력</option>
                                         </select>
                                     </label>
-                                    <button class="email-input_domain_expand active" aria-label="초기화"
-                                     type="button" tabindex="-1">
-                                    <svg id="selBoxDirectBtn" width="10" height="10" style="fill : currentColor; display: none;">
-                                        <path fill-rule="evenodd" 
-                                        d="M5 4L8.5.3l1 1.1L6.2 5l3.5 3.6-1 1L5 6.1 1.4 9.6l-1-1L3.9 5 .4 1.5l1.1-1L5 3.8z"></path>
-                                    </svg>
+                                    <button class="email-input_domain_expand active" aria-label="초기화" type="button"
+                                        tabindex="-1">
+                                        <svg id="selBoxDirectBtn" width="10" height="10"
+                                            style="fill : currentColor; display: none;">
+                                            <path fill-rule="evenodd"
+                                                d="M5 4L8.5.3l1 1.1L6.2 5l3.5 3.6-1 1L5 6.1 1.4 9.6l-1-1L3.9 5 .4 1.5l1.1-1L5 3.8z">
+                                            </path>
+                                        </svg>
                                     </button>
                                 </span>
-                        </div> 
-                        <!-- 비밀번호 -->
+                            </div>
+                            <!-- 비밀번호 -->
+                            <div>
+                                <label>비밀번호</label>
+                                <div class="joinFrom-font">영문,숫자를 포함한 8자 이상의 비밀번호를 입력해주세요.</div>
+                                <label>
+                                    <input class="form-control" placeholder="비밀번호">
+                                </label>
+                            </div>
+                            <div>
+                                <label>비밀번호 확인</label>
+                                <label>
+                                    <input class="form-control" placeholder="비밀번호 확인">
+                                </label>
+                            </div>
+                            <div>
+                                <label>닉네임</label>
+                                <div class="joinFrom-font">다른 유저와 겹치지 않도록 입력해주세요.(2~15자)</div>
+                                <label>
+                                    <input class="form-control" placeholder="별명 (2~15자)">
+                                </label>
+                            </div>
+                            <div>
+                                <label>약관동의</label>
+                                <div class="joinForm-table">
+                                    <div>
+                                        <label>
+                                            <input type="checkbox">
+                                            <span>전체동의
+                                                <span class="joinFrom-font">선택항목에 대한 동의 포함</span>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="join-form-checkbox">만 14세 이상입니다.</span>
+                                        </label>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="join-form-checkbox">이용약관</span>
+                                        </label>
+                                        <a href="#">
+                                            <span class="icon-right joinForm-icon-right"></span>
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="join-form-checkbox">개인정보수집 및 이용동의</span>
+                                        </label>
+                                        <a href="#">
+                                            <span class="icon-right joinForm-icon-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="joinFrom-btn" type="submit">회원가입하기</button>
+                            <p class="joinFrom-font">이미 아이디가 있으신가요?
+                                <a href="#">로그인</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div id="clock" class="whiteFrame-time">
                     <p>clock</p>
                 </div>
             </div>
-            <div class="middleSection-row">           
+            <div class="middleSection-row">
             </div>
         </div>
     </div>
@@ -117,42 +183,44 @@
         var minutes = time.getMinutes();
         var seconds = time.getSeconds();
         var AmPm = "AM";
-        if(hours > 12){
+        if (hours > 12) {
             var AmPm = "PM";
             hours %= 12;
         }
 
         Target.innerText =
-        `${year}-${month + 1}-${date} ${week[day]}요일 ` +
-        `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` + `${AmPm}`;
-            
+            `${year}-${month + 1}-${date} ${week[day]}요일 ` +
+            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` + `${AmPm}`;
+
     }
     clock();
     setInterval(clock, 1000); // 1초마다 실행
-   
+
 </script>
 <script>
     //이메일 입력창 제어
-    function changeSelect(){
-    var selectVal = document.getElementById("selBox").value; //value 값 가져오기
-        
-        if(selectVal == "direct"){ //value 값 비교하기
-        document.getElementById("selBoxDirect").style.display=''; //style.display 속성을 사용하여 html 요소 표시
-        document.getElementById("selBoxDirectBtn").style.display=''; //style.display 속성을 사용하여 html 요소 표시
-        document.getElementById("selBox").style.display='none';   //style.display 속성을 사용하여 html 요소 숨기기
-    } else {
-           document.getElementById("selBoxDirect").style.display='none';
-           document.getElementById("selBoxDirectBtn").style.display='none';
-    }};
+    function changeSelect() {
+        var selectVal = document.getElementById("selBox").value; //value 값 가져오기
+
+        if (selectVal == "direct") { //value 값 비교하기
+            document.getElementById("selBoxDirect").style.display = ''; //style.display 속성을 사용하여 html 요소 표시
+            document.getElementById("selBoxDirectBtn").style.display = ''; //style.display 속성을 사용하여 html 요소 표시
+            document.getElementById("selBox").style.display = 'none';   //style.display 속성을 사용하여 html 요소 숨기기
+        } else {
+            document.getElementById("selBoxDirect").style.display = 'none';
+            document.getElementById("selBoxDirectBtn").style.display = 'none';
+        }
+    };
 
     //버튼 클릭시 이메일 입력창 제어
-    document.getElementById("selBoxDirectBtn").addEventListener('click',selBoxBtn);
-    function selBoxBtn(){
-        document.getElementById("selBoxDirectBtn").style.display='none';
-        document.getElementById("selBoxDirect").style.display='none';
-        document.getElementById("selBox").style.display='';
+    document.getElementById("selBoxDirectBtn").addEventListener('click', selBoxBtn);
+    function selBoxBtn() {
+        document.getElementById("selBoxDirectBtn").style.display = 'none';
+        document.getElementById("selBoxDirect").style.display = 'none';
+        document.getElementById("selBox").style.display = '';
     }
 
- 
+
 </script>
+
 </html>
