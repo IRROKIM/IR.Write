@@ -156,8 +156,8 @@
     align-items: center; /*flex 세로 정렬*/
    }
    .middleSection-row{
-    width: 400px;
-    margin: 0 50px 0 150px;
+    width: 500px;
+    margin: 0 50px 0 120px;
    }
    .middleSection-row.middleSection-text{
     color: white;
@@ -204,5 +204,57 @@
     font-size: 30px;
     color: white;
     }
+    /* 회원가입 */
+    .joinForm{
+    display: flex;
+    justify-content: center;
+    }
+    .form-control{
+    display: block;
+    box-sizing: border-box;
+    height: 30px;
+    line-height: 40px;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 12px;
+    }
+    .email-input{
+        display: flex;
+    }
+     .email-input_local,.email-input_domain{
+        flex: 1 1 0px;
+        position: relative;
+    } 
+    .form-control-blind{
+        overflow: hidden;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        white-space: nowrap;
+    }
+    .email-input_separator{
+        text-align: center;
+        line-height: 30px;
+        color: #dbdbdb;
+    }
+    .email-input_domain_expand{
+        position: absolute;
+        top: 5px;
+        right: 2px;
+        padding: 4px;
+        background: none;
+        border: none;
+        font-size: 0;
+        cursor: default;
+    }
+    .email-input_domain_expand.active:active, .email-input_domain_expand.active:focus,
+    .email-input_domain_expand.active:hover{
+        opacity: .6;
+    }
+
+    
 
   
