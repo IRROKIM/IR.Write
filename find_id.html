@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IR.Write</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 구글웹폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!---->
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="back-container">
+        <header>
+            <a href="home.html"><h1 class="head">IR.Write</h1></a>
+        </header>
+        <section>
+            <div class="section-option">
+                <div class="section-option option-part part-left">
+                    <a href="#">
+                        <img src="main images/menu.png" width="45px" alt="image">
+                    </a>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="search-txt" name="" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..HELLO"
+                        onfocus="this.placeholder=''"
+                        onblur="this.placeholder='&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...HELLO'">
+                    <a class="search-btn" href="#">
+                        <img src="main images/서치.png" width="30px" alt="image">
+                    </a>
+                </div>
+                <div class="section-option option-part part-right">
+                    <a href="login.html" class="section-login">Login</a>
+                    <a href="join.html" class="button section-button">Get started</a>
+                </div>
+            </div>
+        </section>
+        <div class="middleSection">
+            <div class="middleSection-row middleSection-text">
+                <img src="main images/쉼표.png" width="35px" alt="image">
+                <h2>Welcome!</h2>
+                <p>IR.Write 다이어리에 오신 것을 환영합니다.<br>사용하실 아이디와 비밀번호를 입력해주세요.</p>
+            </div>
+            <div class="whiteFrame">
+                <div class="whiteFrame-back">
+                    <img src="main images/하얀색 프레임.png" width="400px" height="570px" alt="image">
+                </div>
+                <div class="whiteFrame-front">
+                    <div style="background-color: #fff; width: 350px; height: 520px;">
+                        <div class="loginForm">
+                            <div class="loginForm-head">
+                                <h2>IR.Write</h2>
+                            </div>
+                            <hr>
+                            <div class="loginForm-intro">
+                                가입한 이메일 주소를 입력해주세요.
+                            </div>
+                            <div class="loginForm-email-border">
+                                <div class="loginForm-email">
+                                    <input class="loginForm-controlA" placeholder="이메일">
+                                    <button type="button" disabled>확인</button>
+                                </div>
+                            </div>
+                            <button class="loginForm-btn" type="submit">아이디 찾기</button>
+                            <section>
+                                <a class="loginForm-sectionB" href="find_pw.html">비밀번호 찾기</a>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div id="clock" class="whiteFrame-time">
+                    <p>clock</p>
+                </div>
+            </div>
+            <div class="middleSection-row">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // 현재 시간 받기
+    var Target = document.getElementById("clock");
+    function clock() {
+        var time = new Date();
+
+        var year = time.getFullYear();
+        var month = time.getMonth();
+        var date = time.getDate();
+        var day = time.getDay();
+        var week = ['일', '월', '화', '수', '목', '금', '토'];
+
+        var hours = time.getHours();
+        var minutes = time.getMinutes();
+        var seconds = time.getSeconds();
+        var AmPm = "AM";
+        if (hours > 12) {
+            var AmPm = "PM";
+            hours %= 12;
+        }
+
+        Target.innerText =
+            `${year}-${month + 1}-${date} ${week[day]}요일 ` +
+            `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}` + `${AmPm}`;
+
+    }
+    clock();
+    setInterval(clock, 1000); // 1초마다 실행
+
+</script>
+<script>
+    //이메일 입력창 제어
+    function changeSelect() {
+        var selectVal = document.getElementById("selBox").value; //value 값 가져오기
+
+        if (selectVal == "direct") { //value 값 비교하기
+            document.getElementById("selBoxDirect").style.display = ''; //style.display 속성을 사용하여 html 요소 표시
+            document.getElementById("selBoxDirectBtn").style.display = ''; //style.display 속성을 사용하여 html 요소 표시
+            document.getElementById("selBox").style.display = 'none';   //style.display 속성을 사용하여 html 요소 숨기기
+        } else {
+            document.getElementById("selBoxDirect").style.display = 'none';
+            document.getElementById("selBoxDirectBtn").style.display = 'none';
+        }
+    };
+
+    //버튼 클릭시 이메일 입력창 제어
+    document.getElementById("selBoxDirectBtn").addEventListener('click', selBoxBtn);
+    function selBoxBtn() {
+        document.getElementById("selBoxDirectBtn").style.display = 'none';
+        document.getElementById("selBoxDirect").style.display = 'none';
+        document.getElementById("selBox").style.display = '';
+    }
+
+
+</script>
+
+</html>

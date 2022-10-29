@@ -11,6 +11,9 @@
         position: relative;
         z-index: 1;
     }
+    .back-container a{
+        text-decoration: none;
+    }
     .back-container::after{
         margin: 0 ; 
         width: 100vw; 
@@ -325,6 +328,128 @@
     .joinFrom-btn:hover{
         border-color: #09addb;
         background-color: #09addb;
+    }
+    /* 로그인 */
+    .loginForm{
+        padding: 0 30px 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 520px; /* 바로 위 태그에서 지정한 크기를 여기에서도 지정해야 justify가 적용된다 */
+    }
+    .loginForm input::placeholder{
+        color: #bdbdbd;
+    }
+    .loginForm-head h2{
+        display: flex;
+        justify-content: center;
+        padding: 0 0 0 0;
+        margin: 0;
+        font-size: 35px;
+    }
+    .loginForm-controlA{
+        display: block;
+        box-sizing: border-box;
+        height: 45px;
+        line-height: 40px;
+        border-radius: 4px 4px 0 0;
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+        font-size: 12px;
+    }
+    .loginForm-controlB{
+        display: block;
+        box-sizing: border-box;
+        height: 45px;
+        line-height: 40px;
+        border-radius: 0 0 4px 4px;
+        border: 1px solid #dbdbdb;
+        background-color: #fff;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0;
+        font-size: 12px;
+    }
+    .loginForm-controlA:hover:not(:focus), .loginForm-controlB:hover:not(:focus){
+        background-color: #fafafa;
+    }
+    .loginForm-btn{
+        color: #fff;
+        border-color: #35c5f0;
+        background-color: #35c5f0;
+        width: 100%;
+        display: inline-block;
+        margin: 20px 0 20px 0;
+        box-sizing: border-box;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        text-align: center;
+        font-weight: 700;
+        cursor: pointer;  
+        font-size: 17px;
+        padding: 10px 5px;
+    }
+    .loginform-btn:hover{
+        border-color: #09addb;
+        background-color: #09addb;
+    }
+    .loginForm section{
+        text-align: center;
+        font-size: 12px;
+    }
+    .loginForm section a{
+        text-decoration: 0;
+        color:#424242;
+    }
+    .loginForm section .loginForm-sectionA{
+        margin: 0 15px 0 0;
+    }
+    .loginForm section .loginForm-sectionB{
+        margin: 0;
+    }
+    /* 아이디/비번 찾기 */
+    .loginForm-email-border{
+        border: 1px solid rgb(219, 219, 219);
+        padding: 8px 15px;
+    }
+    .loginForm-intro{
+        font-size: 13px;
+        margin: 0 0 12px 0;
+        color: #424242;
+    }
+    .loginForm-email{
+        display: flex;
+        align-items: center;
+    }
+    .loginForm-email .loginForm-controlA{
+        margin: 0 5px 0 0;
+        padding: 0;
+        height: 20px;
+        border: none;
+        border-radius: 4px;
+    }
+    .loginForm-email .loginForm-controlA:focus-visible{
+        outline: none;
+        box-shadow: 0 0 0 3px rgb(53 197 240 / 30%);        
+    }
+    .loginForm-email button{
+        white-space: pre;
+        height: 30px;
+        font-size: 14px;
+        padding: 5px 10px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: #35c5f0;
+        border-color: #35c5f0;
+        color: #fff;
+    }
+    .loginForm hr{
+        width: 100%; /*width를 지정안하면 화면에 안나옴*/
+        margin: 5px 0 40px 0;
+        border-color:rgb(53 197 240 / 30%);
     }
 
     
